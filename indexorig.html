@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+
+<script src="jquery-1.11.3.min.js"></script>
+<script src="jquery.mobile-1.4.5.min.js"></script>
+
+
+
+<style>
+
+.ui-selectmenu.ui-popup .ui-input-search {
+    margin-left: .5em;
+    margin-right: .5em;
+}
+.ui-selectmenu.ui-dialog .ui-content {
+    padding-top: 0;
+}
+.ui-selectmenu.ui-dialog .ui-selectmenu-list {
+    margin-top: 0;
+}
+.ui-selectmenu.ui-popup .ui-selectmenu-list li.ui-first-child .ui-btn {
+    border-top-width: 1px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.ui-selectmenu.ui-dialog .ui-header {
+    border-bottom-width: 1px;
+}
+label {
+    cursor: default;
+}
+</style>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Match Stars </h1>
+  </div>
+<!-- <a href="#page03" id="but1" data-rel="dialog" data-role="button" onclick="sakuna();">Click for Sakuna / Shakuna</a>-->
+
+    <div data-role="collapsible" class="openMe" id="block0">
+    <h3>Settings </h3>
+    <h4>Select class or caste</h4>
+    <select id="set1">
+     <option value=1>Priest</option>
+    <option value=2>Warrior</option>
+    <option value=3>Business</option>
+     <option value=4>Others</option>
+     <option value=5>ChandraMana</option>  
+    </select> 
+	<p>
+    <h4>Level of test's 'strictness'.</h4>
+    <label for = "set2">Stringent </label>
+    <input type="radio" name="set2" id="set2" value="1" >     &nbsp; &nbsp; &nbsp
+    <label for = "set2a">Liberal</label>
+    <input type="radio" name="set2" id="set2a"  value="2" checked>
+     </p>
+     <input type="hidden" id="hid1" value="0" />
+     <script>
+     document.getElementById("set2").onclick = handler;
+     document.getElementById("set2a").onclick= handler;
+     function handler(){
+     document.getElementById("hid1").value = this.value;
+//     alert(document.getElementById("hid1").value);
+     }
+     </script>
+	<p>
+    <h4>Star Names' Language.</h4>
+    <label for="set3">Sanskrit</label>
+    <input type="radio" name="set3" id="set3" value="1" >&nbsp; &nbsp; &nbsp
+    <label for="set3a">Tamil</label>
+    <input type="radio" name="set3" id="set3a"  value="2" checked>
+     </p>     
+    </div>
+
+    <div data-role="collapsible" id="block1">
+   <h3 align="center">Enter Boy-Girl Data!</h3>
+ 
+    <h3 id="autocomplete-local">Select Boy's & Girl's Stars</h3>
+			
+	<p><a href="#page0" data-rel="dialog" data-role="button">Click to add Boy's & Girl's stars</a></p>		
+     </div>   
+
+ <div data-role="collapsible" class="openMe" id="block2">
+ <a name="anchor1"></a>
+     <h3 id="res1">Matching -- Result</h3>
+<p><span><h4 id="BS"></h4></span></p> 
+
+ <table id="tabres">
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr> 
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+  <tr> <td></td> <td></td> </tr>
+ </table>
+*Nadi is not counted but imortant. 
+North Indians and Chandramana followers need this.<br>
+<span id="msg2" style="font-weight:bold"></span>
+<button type="button" onclick="sakuna();" id="but2">Click for Sakuna</button>
+
+You may like to have a paid professional Horoscope Matching and Analysis as next step of Nakshatra matching done in this site.
+<a href="EmailUs.htm" data-role="button">Order Horoscopes' Matching Analysis:</a>
+</div>
+
+  <div data-role="collapsible" class="openMe" id="block3">
+
+    <h3>Matching -- #Table</h3>
+
+ <h4>Select Options </h4>
+
+	<fieldset>
+	
+    <h4>Select Boy or Girl:</h4>
+  <label for="sex1"> Boy </label>
+  <input type="radio" name="sex" id="sex1" value="boy" checked>
+  &nbsp; &nbsp; &nbsp
+  <label for="sex2"> Girl</label>
+  <input type="radio" name="sex" id="sex2" value="girl">
+   </fieldset>
+
+ <select id="opt1">
+  <option value="1">Matching Stars List</option>
+  <option value="2">Star-wise</option>
+  <option value="3">Dinam</option>
+  <option value="4">Ganam</option>
+  <option value="5">Mahendram</option>
+  <option value="6">Sthree Dheergam</option>    
+  <option value="7">Yoni</option>          
+  <option value="8">Rasi</option> 
+  <option value="9">Rasiadhipathy</option>
+  <option value="10">Vashyam</option> 
+  <option value="11">Rajju</option>
+  <option value="12">Vedha</option>
+  <option value="13">Nadi</option>
+  <option value="14">Nirnayam</option>  
+      
+</select> 
+
+
+   <p><a href="#page02" data-rel="dialog" data-role="button">Click to add Boy's & Girl's stars</a></p>
+  </div><!-- accordion-->
+
+
+  <div data-role="collapsible"   class="openMe" id="block4">
+ <h4>Result </h4> 
+ <p><span><h4 id="TS"></h4></span></p><br>
+ <span id="rem1"></span>
+
+ <div id="tabh1"><table id="tabhash"></table></div>
+ <div id="tabh2"><table id="tabhash2"></table></div>
+ <div id="tabh3"><table id="tabhash3"></table></div>
+ <button type="button" onclick="sakuna();" id="but3">Click for Sakuna</button>
+  <span id="rem2">
+<ul>Reminders: (Horoscope Match is necessary next step)
+<li>Same Stars for Boy and Girl is not preferred by some</li>
+<li>Some are very strict about Rajju Match without exemption made. </li></ul>
+<ul>Following Stars match with all other stars.
+<li>MrigaSeersham</li>
+<li>Makam</li>
+<li>Swati</li>
+<li>Anuradha / Anusham</li></ul>
+<ul>Some do not prefer 
+<li>Moola (1) if Boy's father is alive.</li>
+<li>Ashlesha (Ayilyam) (1) if Boy's mother is alive.</li>
+<li>Jyeshta (Kettai) (1) for the eldest Boy only.</li>
+<li>Visakham (4)as suitable for the youngest boy only.</li></ul>
+
+ </span>
+
+  </div><!--collapsible-->
+<div data-role="collapsible">
+    <h3>Send to us birth details for Horoscope Matching </h3>
+<a href="http://goo.gl/forms/13Kubq9CkS" data-role="button">Order Horoscopes' Matching Analysis:</a>    
+</div>
+
+<div data-role="collapsible">
+<h3>Payments</h3>
+<a href="https://www.payumoney.com/paybypayumoney/#/76489" data-role="button">Pay here donations and fees for matching.</a>    
+
+</div>
+
+<div data-role="collapsible" "block5">
+    <h3>About us:</h3>
+<a href="AboutUs.htm" data-role="button">Read about us</a>        
+</div>
+
+  <div data-role="footer">
+    <h1>@copyright:  Astraura Research Centre</h1>
+  </div>
+
+
+</div> <!--page-->
+
+<div data-role="page" data-dialog="true" id="page0">
+ <div data-role="header">
+    <h4 id="t1">Select Boy's Star / Pada</h4>
+  </div>
+
+				<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Select stars.. 2-3 letters." id="lv1" >
+					<!--<li onclick="flert(this.innerHTML,getIndex(this));">Acura</li>-->
+<li value=1>Aswati</li>	
+<li value=2>Bharani</li>	
+<li value=3>Karthikai</li>	
+<li value=4>Rohini</li>	
+<li value=5>Mrigaseersha</li>	
+<li value=6>Thiruvadirai</li>	
+<li value=7>Punarpoosam</li>	
+<li value=8>Poosam</li>	
+<li value=9>Ayilyam</li>	
+<li value=10>Magham</li>	
+<li value=11>Pooram</li>	
+<li value=12>Uthram</li>	
+<li value=13>Hastham</li>	
+<li value=14>Chitrai</li>	
+<li value=15>Swati</li>	
+<li value=16>Visakham</li>	
+<li value=17>Anusham</li>	
+<li value=18>Kettai</li>	
+<li value=19>Moolam</li>	
+<li value=20>Pooradam</li>	
+<li value=21>Uthradam</li>	
+<li value=22>Thiruvonam</li>	
+<li value=23>Avittam</li>	
+<li value=24>Sadayam</li>	
+<li value=25>Poorattathi</li>	
+<li value=26>Uthrattathi</li>	
+<li value=27>Revati</li>	
+				</ul>
+        <h4 id="t2">Select Boy's Pada</h4>
+        <select id="sel1" data-native-menu="true">
+         <option value=1>First</option>
+          <option value=2>Second</option>
+          <option value=3>Third</option>
+         <option value=4>Fourth</option>
+        </select> 
+
+<button type="button" id="btn1" onclick="getData();" value="Next">Next</button>
+
+</div>
+<div data-role="page" data-dialog="true" id="page02">
+ <div data-role="header">
+    <h4 id="t3">Select Boy/Girl's Star / Pada</h4>
+  </div>
+
+				<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Select stars.. 2-3 letters." id="lv2" >
+					<!--<li onclick="flert(this.innerHTML,getIndex(this));">Acura</li>-->
+<li value=1>Aswati</li>	
+<li value=2>Bharani</li>	
+<li value=3>Karthikai</li>	
+<li value=4>Rohini</li>	
+<li value=5>Mrigaseersha</li>	
+<li value=6>Thiruvadirai</li>	
+<li value=7>Punarpoosam</li>	
+<li value=8>Poosam</li>	
+<li value=9>Ayilyam</li>	
+<li value=10>Magham</li>	
+<li value=11>Pooram</li>	
+<li value=12>Uthram</li>	
+<li value=13>Hastham</li>	
+<li value=14>Chitrai</li>	
+<li value=15>Swati</li>	
+<li value=16>Visakham</li>	
+<li value=17>Anusham</li>	
+<li value=18>Kettai</li>	
+<li value=19>Moolam</li>	
+<li value=20>Pooradam</li>	
+<li value=21>Uthradam</li>	
+<li value=22>Thiruvonam</li>	
+<li value=23>Avittam</li>	
+<li value=24>Sadayam</li>	
+<li value=25>Poorattathi</li>	
+<li value=26>Uthrattathi</li>	
+<li value=27>Revati</li>	
+
+					
+				</ul>
+        <h4 id="t2">Select Boy/Girl's Pada</h4>
+        <select id="sel2" data-native-menu="true">
+         <option value=1>First</option>
+          <option value=2>Second</option>
+          <option value=3>Third</option>
+         <option value=4>Fourth</option>
+        </select> 
+
+    <button type="button" id="btn1" onclick="getData3();" value="Next">Next</button>
+
+</div>
+
+<div data-role="page" data-dialog="true" id="page03">
+ <div data-role="header">
+    <h4 id="t3">Beware! Sakuna:</h4>
+ </div>
+ <div id="sakdiv"></div>
+ <div data-role="footer">
+    <h4 id="f4">Beware! Sakuna:</h4>
+ </div>
+</div>
+
+
+<!--//------------ -->
+<script src="matchStarJQ2.js"></script>
+<script>
+var bstar=-1; var gstar =-1; var tstar=-1; var qstar=-1;
+var bpada=-1; var gpada=-1; var tpada=0;
+var stcnt=0; var pdcnt =0; brasi =0; grasi=0; rasidiff=0; 
+var caste = 0; var libval = 0;var radpval = 0;
+var lang =1; var rc=""; var remindlist=""; var RevisedScore=0;
+var NirnayaStr="";
+var bs=""; var btext=""; var heading="";
+
+function getData(){
+if (document.getElementById("btn1").value=="Next"){
+bs=bstar;
+
+bpada = parseInt(document.getElementById("sel1").value);
+document.getElementById("t1").innerHTML="Select Girl's Star";
+document.getElementById("t2").innerHTML="Select Girl's Pada";
+heading =  'Boy: ' + btext+' '+bpada;
+//document.getElementById("BS").innerHTML=heading;
+document.getElementById("btn1").value="Done";
+document.getElementById("btn1").innerHTML="Done";
+$("input[data-type='search']").val('');
+}
+else getData2();
+}
+function getData2(){
+gstar=bstar;
+bstar=bs;
+gpada = parseInt(document.getElementById("sel1").value);
+document.getElementById("btn1").value="Next";
+document.getElementById("btn1").innerHTML="Next";
+document.getElementById("t1").innerHTML="Select Boy's Star";
+document.getElementById("t2").innerHTML="Select Boy's Pada";
+document.getElementById("BS").innerHTML= heading + ' Girl: ' + btext+' '+gpada;
+$("input[data-type='search']").val('');
+
+$.mobile.navigate( "#pageone", { transition : "slide", info: "Inputpage" });
+
+
+$("#block0").collapsible( "option", "collapsed", true);
+$("#block1").collapsible( "option", "collapsed", true);
+$("#block2").collapsible( "option", "collapsed", false );
+$("#block3").collapsible( "option", "collapsed", true);
+$("#block4").collapsible( "option", "collapsed", true);
+$("#block5").collapsible( "option", "collapsed", true );
+
+DasaVida();
+//$.mobile.navigate( "#res1", { transition : "slide", info: "Inputpage" });
+//window.location.hash = '#res1';
+//location.href = "#res1"
+
+}
+
+function getData3(){
+rc =  (document.getElementsByName("sex")[0].checked)?"Boy":"Girl";
+tpada = parseInt(document.getElementById("sel2").value);
+var optext = (document.getElementById("opt1").options[document.getElementById("opt1").selectedIndex].text);
+document.getElementById("TS").innerHTML=rc + ' ' + btext + ' '+ tpada+' - :' + optext ;
+$("input[data-type='search']").val('');
+$.mobile.navigate( "#pageone", { transition : "slide", info: "Inputpage" });
+
+$("#block0").collapsible( "option", "collapsed", true);
+$("#block1").collapsible( "option", "collapsed", true);
+$("#block2").collapsible( "option", "collapsed", true );
+$("#block3").collapsible( "option", "collapsed", true);
+$("#block4").collapsible( "option", "collapsed", false);
+$("#block5").collapsible( "option", "collapsed", true );
+DasaVida2();
+//$.mobile.navigate( "#res1", { transition : "slide", info: "Inputpage" });
+//window.location.hash = '#res1';
+//location.href = "#res1"
+
+
+}
+
+var nakshatra =["Ashvini","Bharani","Kritika","Rohini","Mrigashira","Ardra","Punarvasu","Pushya","Ashlesha","Magha","Purva Phalguni","Uttara Phalguni","Hasta","Chitra","Swati","Vishakha","Anuradha","Jyeshtha","Mula","Purva Ashadha","Uttara Ashadha","Shravan","Dhanistha","Shatabhisha","Purva Bhadrapad","Uttara Bhadrapad","Revati"];
+
+var naksTamil =["Aswati","Bharani","Karthikai","Rohini","Mrigaseersha","Thiruvadirai","Punarpoosam","Poosam","Ayilyam","Magham","Pooram","Uthram","Hastham","Chitrai","Swati","Visakham","Anusham","Kettai","Moolam","Pooradam","Uthradam","Thiruvonam","Avittam","Sadayam","Poorattathi","Uthrattathi","Revati"];
+
+var Remark=""; var Dinam=""; var Ganam=""; var sl;
+var ReisedScore="";
+var RajjuStrict=false;
+var slist = document.getElementById("lv1");
+var sitems = slist.getElementsByTagName('li');
+
+
+for (var i=0;i<27;i++) {sitems[i].innerHTML=nakshatra[i]+' - '+naksTamil[i];}
+slist = document.getElementById("lv2");
+sitems = slist.getElementsByTagName('li');
+
+for (var i=0;i<27;i++) {sitems[i].innerHTML=nakshatra[i]+' - '+naksTamil[i];}
+
+//slist = document.getElementById("lv3");
+//sitems = slist.getElementsByTagName('li');
+
+//for (var i=0;i<27;i++) {sitems[i].innerHTML=nakshatra[i]+' - '+naksTamil[i];}
+
+</script>
+<script src="MatchStar.js" ></script>
+</body>
+
+</html>
