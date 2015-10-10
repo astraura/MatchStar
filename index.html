@@ -64,14 +64,14 @@ label {
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+
         <script type="text/javascript">
 //            app.initialize();
  function openExt(url,yesno){
 if(yesno==1)
-cordova.InAppBrowser.open(url, '_blank', 'location=yes');
+window.open(url, '_blank', 'location=yes');
 else{
-var ref=cordova.InAppBrowser.open(url, '_self', 'location=no');
+var ref=window.open(url, '_self', 'location=no');
  // close InAppBrowser after 5 seconds
          setTimeout(function() {
              ref.close();
@@ -81,7 +81,7 @@ var ref=cordova.InAppBrowser.open(url, '_self', 'location=no');
 }
 
     function onDeviceReady() {
- window.open=cordova.InAppBrowser.open;
+// window.open=cordova.InAppBrowser.open;
        }           
             
         </script>
