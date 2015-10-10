@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="MatchStars" version="0.0.1"
+xmlns="http://www.w3.org/ns/widgets"
+xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<name>MatchStar</name>
+<description>Matching Stars for matrimony</description>
+<author email="matchcharts@gmail.com" href="http://www.astraura.org">
+Astaura
+</author>
+<content src="index.html" />
+<!-- This now applies only to HTTP and HTTPS on Android -->
+<access origin="*" />
+<!-- These are needed in Cordova 3.6 and newer for Android -->
+<access origin="mailto:*" launch-external="yes"/>
+<access origin="tel:*" launch-external="yes"/>
+<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+</widget>
