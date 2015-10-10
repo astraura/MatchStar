@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InAppBrowser.addEventListener Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://apache.org', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+         ref.addEventListener('exit', function() { alert(event.type); });
+    }
+$(".extLink").on('click', function(event){ window.plugins.childBrowser.showWebPage('http://www.stackoverflow.com/', { showNavigationBar: true })});
+
+
+$(".ext2Link").on('click', function(event){
+var ref = window.open('http://www.stackoverflow.com/', '_blank', 'location=yes')});
+    </script>
+  </head>
+  <body>
+  
+  <a href="#" class="extLink">Test</a>
+   <a href="#" class="ext2Link">Test2</a> 
+  
+  </body>
+</html>
