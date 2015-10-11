@@ -6,7 +6,7 @@
         id        = "com.astraura.matchstars"
         version   = "1.0.0">
 
-    <name>Matarsch st</name>
+    <name>Match Stars/name>
 
     <description>
         Matching Stars for matrimony alliance.
@@ -62,7 +62,7 @@
     <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
@@ -134,7 +134,3 @@
 
 
 </widget>
-
-    Status API Training Shop Blog About Pricing 
-
-    © 2015 GitHub, Inc. Terms Privacy Security Contact Help 
