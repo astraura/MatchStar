@@ -2,9 +2,9 @@
 <widget id="com.astraura.webapps" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Hello World</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Matching Stars of Boy / Girl for matrimony. South Indian Astrology.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="matchcharts@gmail.com" href="http://matchcharts.com">
         PhoneGap Team
     </author>
     <content src="index.html" />
