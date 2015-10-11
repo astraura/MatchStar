@@ -39,16 +39,7 @@
 
     </head>
     <body>
-    <p>
-        <a href="http://www.google.com" onclick="window.open(this.href, '_blank', 'location=yes');">Google search</a>
-        </p>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+    
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -76,6 +67,17 @@ var ref=cordova.InAppBrowser.open(url, '_self', 'location=no');
         </script>
         
        <div data-role="page" id="pageone">
+       	
+       	<p>
+        <a href="http://www.google.com" onclick="window.open(this.href, '_blank', 'location=yes');">Google search</a>
+        </p>
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
   <div data-role="header">
     <h1>Match Stars </h1>
   </div>
