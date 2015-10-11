@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.astraura.webapps" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Hello World</name>
+    <name>Match Stars</name>
     <description>
         Matching Stars of Boy / Girl for matrimony. South Indian Astrology.
     </description>
