@@ -72,7 +72,26 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
+         //   app.initialize();
+             function openExt(url,yesno){
+if(yesno==1)
+cordova.InAppBrowser.open(url, '_blank', 'location=yes');
+else{
+var ref=cordova.InAppBrowser.open(url, '_self', 'location=no');
+ // close InAppBrowser after 5 seconds
+         setTimeout(function() {
+             ref.close();
+         }, 2000);
+
+}
+}
+
+    function onDeviceReady() {
+ window.open=cordova.InAppBrowser.open;
+       }           
+
+            
+            
         </script>
         
        <div data-role="page" id="pageone">
@@ -94,7 +113,7 @@
 	<p>
     <h4>Level of test's 'strictness'.</h4>
     <label for = "set2">Stringent </label>
-    <input type="radio" name="set2" id="set2" value="1" >     &nbsp; &nbsp; &nbsp
+    <input type="radio" name="set2" id="set2" value="1" >     &nbsp; &nbsp; &nbsp;
     <label for = "set2a">Liberal</label>
     <input type="radio" name="set2" id="set2a"  value="2" checked>
      </p>
@@ -110,7 +129,7 @@
 	<p>
     <h4>Star Names' Language.</h4>
     <label for="set3">Sanskrit</label>
-    <input type="radio" name="set3" id="set3" value="1" >&nbsp; &nbsp; &nbsp
+    <input type="radio" name="set3" id="set3" value="1" >&nbsp; &nbsp; &nbsp;
     <label for="set3a">Tamil</label>
     <input type="radio" name="set3" id="set3a"  value="2" checked>
      </p>     
@@ -151,7 +170,7 @@ North Indians and Chandramana followers need this.<br>
 <button type="button" onclick="sakuna();" id="but2">Click for Sakuna</button>
 
 You may like to have a paid professional Horoscope Matching and Analysis as next step of Nakshatra matching done in this site.
-<a href="EmailUs.htm" data-role="button">Order Horoscopes' Matching Analysis:</a>
+<a href="EmailUs.htm"   onclick="openExt(this.href,1);" data-role="button">Order Horoscopes' Matching Analysis:</a>
 </div>
 
   <div data-role="collapsible" class="openMe" id="block3">
@@ -222,18 +241,18 @@ You may like to have a paid professional Horoscope Matching and Analysis as next
   </div><!--collapsible-->
 <div data-role="collapsible">
     <h3>Send to us birth details for Horoscope Matching </h3>
-<a href="http://goo.gl/forms/13Kubq9CkS" data-role="button">Order Horoscopes' Matching Analysis:</a>    
+<a  onclick="openExt(this.href,1);"  href="http://goo.gl/forms/13Kubq9CkS" data-role="button">Order Horoscopes' Matching Analysis:</a>    
 </div>
 
 <div data-role="collapsible">
 <h3>Payments</h3>
-<a href="https://www.payumoney.com/paybypayumoney/#/76489" data-role="button">Pay here donations and fees for matching.</a>    
+<a  onclick="openExt(this.href,1);"  href="https://www.payumoney.com/paybypayumoney/#/76489" data-role="button">Pay here donations and fees for matching.</a>    
 
 </div>
 
 <div data-role="collapsible" "block5">
     <h3>About us:</h3>
-<a href="AboutUs.htm" data-role="button">Read about us</a>        
+<a  onclick="openExt(this.href,1);"  href="AboutUs.htm" data-role="button">Read about us</a>        
 </div>
 
   <div data-role="footer">
