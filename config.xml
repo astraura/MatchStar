@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.inAppExample" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>InAppBrowser App</name>
+<widget id="com.astraura.matchstars" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Match Stars</name>
     <description>
-        InAppBrowser App Example.
+        Stars or Nakshatra matching for matrimony. South Indian Astrology
     </description>
-    <author email="antonellabsaccone@gmail.com" href="http://www.google.com.ar">
+    <author email="matchcharts@gmail.com" href="http://www.astraura.org">
         Antonella Saccone
     </author>
     <preference name="permissions" value="none" />
