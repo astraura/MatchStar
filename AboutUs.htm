@@ -1,14 +1,31 @@
+<!DOCTYPE html>
 <html>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<head>
+  <head>
+    <title>Astaura Horosceop Matching</title>
 
-<title>Astraura Horoscope Matching</title>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
-</head>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-<body>
-<iframe src="https://docs.google.com/document/d/1-aMUQyRkYvVmi6TE8hfVvbpnmHuqNJm1PPJGlkDeu_U/pub"  width="500" height="500"></iframe>
-</body>
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('https://docs.google.com/document/d/1-aMUQyRkYvVmi6TE8hfVvbpnmHuqNJm1PPJGlkDeu_U/pub', '_self', 'location=yes');
+//         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+//         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) {window.history.back(); });
+//    
 
+}
+
+
+
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
