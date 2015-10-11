@@ -9,8 +9,8 @@ Astaura
 </author>
 <content src="index.html" />
 <!-- This now applies only to HTTP and HTTPS on Android -->
-< gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+<gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
 <!-- These are needed in Cordova 3.6 and newer for Android -->
-<access origin="*"/>
+<access origin="*" />
 
 </widget>
