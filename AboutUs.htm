@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Astaura Horosceop Matching</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('https://docs.google.com/document/d/1-aMUQyRkYvVmi6TE8hfVvbpnmHuqNJm1PPJGlkDeu_U/pub', '_self', 'location=yes');
+//         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+//         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) {window.history.back(); });
+//    
+
+}
+
+
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
