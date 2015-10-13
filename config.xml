@@ -23,7 +23,7 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     
-    <gap:plugin name="org.apache.cordova.inappbrowser" source="pgb" version="0.5.2" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
 
     
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
