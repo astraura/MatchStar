@@ -8,6 +8,7 @@
         Antonella Saccone
     </author>
     <preference name="permissions" value="none" />
+    <preference name="phonegap-version" value="3.7.0" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
@@ -23,7 +24,7 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     
-    <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" source="pgb" version="0.5.2" />
 
     
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
@@ -35,5 +36,7 @@
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     <access origin="*" />
-    
+    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+<plugin name="InAppBrowser" value="CDVInAppBrowser" />
+
 </widget>
