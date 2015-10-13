@@ -27,8 +27,8 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" source="pgb" version="0.5.2" />
 
     
-    <icon gap:platform="android" gap:qualifier="mdpi" src="mdpi.png" />
-    <icon gap:platform="android" gap:qualifier="hdpi" src="icon.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="icon.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="hdpi.png" />
     <icon gap:platform="android" gap:qualifier="xhdpi" src="xhdpi.png" />
 	<gap:splash src="splash.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
