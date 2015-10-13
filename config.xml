@@ -29,7 +29,7 @@
     
     <icon gap:platform="android" gap:qualifier="mdpi" src="mdpi.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="hdpi.png" />
-    <icon gap:platform="android" gap:qualifier="xhdpi" src="xhdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="icon.png" />
 	<gap:splash src="splash.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
