@@ -35,7 +35,5 @@
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     <access origin="*" />
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
-<plugin name="InAppBrowser" value="CDVInAppBrowser" />
-
+    
 </widget>
