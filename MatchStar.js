@@ -911,22 +911,22 @@ return Nirnayam;
 switch (Caste){
 case 1:
 if (DinaVal == 0 || RajjuVal == 0) {
-Nirnayam = "Horoscopes do not match."; 
+Nirnayam = "Horoscopes do not match. Both Dina and Rajju are important for this class."; 
 return Nirnayam;
 } break;
 case 2:
 if (GanaVal == 0 || RajjuVal == 0) {
-Nirnayam = "Horoscopes do not match.";
+Nirnayam = "Horoscopes do not match. Both Gana and Rajju are important for this class.";
 return Nirnayam;
 } break;
 case 3:
 if (RasiVal == 0 || RajjuVal == 0) {
-Nirnayam = "Horoscopes do not match.";
+Nirnayam = "Horoscopes do not match. Both Rasi and Rajju are important for this class.";
 return Nirnayam;
 } break;
 case 4:
 if (YoniVal == 0 || RajjuVal == 0) {
-Nirnayam = "Horoscopes do not match."; 
+Nirnayam = "Horoscopes do not match. Both Yoni and Rajju are important for this class."; 
 return Nirnayam;
 } break;
 case 5:
